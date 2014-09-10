@@ -54,13 +54,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/cup_text_view"
-            android:text=".0208 cup"
+            android:text=".0237 cup"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/tbs_text_view"
@@ -70,13 +72,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/oz_text_view"
-            android:text=".1666 oz"
+            android:text=".208 oz"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/kg_text_view"
@@ -86,13 +90,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/quart_text_view"
             android:text=".0052 quart"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/gallon_text_view"
@@ -102,29 +108,33 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/pound_text_view"
             android:text=".0125 pound"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/ml_text_view"
-            android:text="4.9289"
+            android:text="5.9193 ml"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/litre_text_view"
-            android:text=".0049 litre"
+            android:text=".0059 litre"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/mg_text_view"
@@ -134,15 +144,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/pint_text_view"
             android:text=".0104 pint"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="left|top"/>
-
-
+            android:layout_gravity="left|top"
+            android:textColor="@android:color/black"/>
 
     </GridLayout>
 
