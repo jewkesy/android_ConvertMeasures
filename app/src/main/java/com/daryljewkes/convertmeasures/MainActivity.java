@@ -1,21 +1,22 @@
 package com.daryljewkes.convertmeasures;
 
-import android.app.Activity;
+//import android.app.Activity;
 import android.os.Bundle;
-//import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
-    private Spinner unitTySpinner;
+    private Spinner unitTypeSpinner;
     private EditText amountTextView;
 
     TextView teaspoonTextView, tablespoonTextView, cupTextView, ounceTextView,
@@ -36,21 +37,29 @@ public class MainActivity extends Activity {
     }
 
     private void addItemsToUnitTypeSpinner() {
-        unitTySpinner = (Spinner) findViewById(R.id.unit_type_spinner);
+        unitTypeSpinner = (Spinner) findViewById(R.id.unit_type_spinner);
         ArrayAdapter<CharSequence> unitTypeSpinnerAdaptor = ArrayAdapter.createFromResource(this, R.array.conversion_types, android.R.layout.simple_spinner_item);
         unitTypeSpinnerAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        unitTySpinner.setAdapter(unitTypeSpinnerAdaptor);
+        unitTypeSpinner.setAdapter(unitTypeSpinnerAdaptor);
     }
 
-    private void addListenerToUnitTypeSpinner() {
-        unitTySpinner = (Spinner) findViewById(R.id.unit_type_spinner);
-        unitTySpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String itemSelectedInSpinner = parent.getItemAtPosition(position).toString();
-                // TODO checkIfConvertingFromTsp(itemSelectedInSpinner);
-            }
+    public void addListenerToUnitTypeSpinner() {
+        unitTypeSpinner = (Spinner) findViewById(R.id.unit_type_spinner);
+        unitTypeSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long arg3)
+            {
+                // Get the item selected in the Spinner
+                String itemSelectedInSpinner = parent.getItemAtPosition(pos).toString();
 
+                // Verify if I'm converting from teaspoon so that I use the right
+                // conversion algorithm
+                checkIfConvertingFromTsp(itemSelectedInSpinner);
+
+            }
+            public void onNothingSelected(AdapterView<?> arg0)
+            {
+                // TODO maybe add something here later
+            }
         });
     }
 
